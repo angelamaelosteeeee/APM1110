@@ -1,0 +1,18 @@
+# Set probability of success
+p <- 0.2
+
+# Generate 1000 random variables from the geometric distribution
+x <- rgeom(n = 1000, prob = p)
+
+# Calculate mean, variance, and standard deviation
+m_x <- mean(x)
+v_x <- var(x)
+sd_x <- sd(x)
+
+# Print the results
+cat("Mean:", m_x, "\n")
+cat("Variance:", v_x, "\n")
+cat("Standard deviation:", sd_x, "\n")
+
+# Plot a histogram of the results
+hist(x, main = "Geometric Distribution", xlab = "Number of Trials until First Success")
